@@ -525,13 +525,13 @@ p {
 }
 .modal-icon {
   position: absolute;
-  width: 18px;
-  height: 18px;
-  top: 11px;
-  left: 12px;
+  display: flex;
+  top: 25px;
+  left: 15px;
 }
 .form-field {
   display: flex;
+  position: relative;
   flex-direction: column;
   margin-bottom: 10px;
 }
@@ -539,6 +539,9 @@ p {
   margin-bottom: 4px;
 }
 .form-field input {
+  display: block;
+
+  padding: 11px 12px;
   width: 448px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -554,7 +557,27 @@ p {
 
   color: var(--primary-text-color);
 }
-
+.form-chekbox {
+  display: flex;
+  position: relative;
+  width: 423px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.checkbox-icon {
+  position: absolute;
+  display: inline-block;
+  border: #212121;
+}
+.form-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.button-primary .form-button {
+  padding: 10px 55px;
+}
 /*Портфолио работ*/
 
 .filter-button {
