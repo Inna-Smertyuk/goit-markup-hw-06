@@ -458,6 +458,33 @@ p {
 .social-link-footer:focus {
   background-color: var(--accent-color);
 }
+.form-footer {
+  margin-top: 0;
+}
+.footer-box {
+  position: relative;
+  display: inline-block;
+  margin-left: 93px;
+}
+.title-footer {
+  width: 219px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--white-text-color);
+  margin-bottom: 20px;
+}
+.footer-input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  margin-top: 0;
+}
+
 /*Модальное окно*/
 .backdrop {
   position: fixed;
@@ -514,6 +541,12 @@ p {
   height: 18px;
   top: 0;
   fill: var(--black-text-color);
+  cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon-box:hover,
+.icon-box:focus {
+  fill: var(--accent-color);
 }
 .modal-title {
   font-weight: 700;
@@ -527,6 +560,8 @@ p {
   position: absolute;
   top: 50%;
   left: 12px;
+  margin-right: 20px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-field {
   display: flex;
@@ -534,13 +569,18 @@ p {
   flex-direction: column;
   margin-bottom: 10px;
 }
-.form-field:last-child {
-  margin-bottom: 0;
-}
 .form-field:focus-within > .modal-icon {
   fill: var(--accent-color);
 }
-
+.form-field:focus-within > .form-input {
+  border-color: var(--accent-color);
+}
+.form-field.comment {
+  margin-bottom: 0;
+}
+.form-field.comment:focus-within > textarea {
+  border-color: var(--accent-color);
+}
 .form-field label {
   margin-bottom: 4px;
 }
@@ -554,7 +594,12 @@ p {
   box-sizing: border-box;
   border-radius: 4px;
 }
-.form-lable {
+.form-input {
+  cursor: pointer;
+  padding-left: 50px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-label {
   font-size: 12px;
   font-weight: 400;
   line-height: 1.2;
@@ -563,15 +608,24 @@ p {
 
   color: var(--primary-text-color);
 }
-.form-chekbox {
+.form-checkbox {
   display: flex;
   position: relative;
   width: 423px;
   margin-top: 20px;
   align-items: center;
   justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
 }
-.checkbox-icon {
+.checkbox {
+  position: absolute;
+  appearance: none;
+}
+.text-comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-icon.checkbox {
   position: absolute;
   display: inline-block;
   border: #212121;
@@ -580,6 +634,7 @@ p {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  cursor: pointer;
 }
 .button-primary .form-button {
   padding: 10px 55px;
@@ -596,6 +651,16 @@ p {
   outline: none;
   box-sizing: border-box;
   border-radius: 4px;
+}
+.checkbox.modal-icon {
+  width: 16px;
+}
+.checkbox-link {
+  color: var(--accent-color);
+}
+.check-text {
+  line-height: 1.7;
+  margin-left: 7px;
 }
 
 /*Портфолио работ*/
