@@ -165,29 +165,24 @@ a {
   margin: auto;
 }
 .button {
-  background: var(--accent-color);
-  font: inherit;
   min-width: 200px;
   height: 50px;
   padding: 10px 32px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
   margin-top: 30px;
-}
+  border: transparent;
 
-.button-primary {
-  color: var(--white-text-color);
-  background-color: var(--accent-color);
-  text-decoration: none;
   font-weight: 700;
   font-size: 16px;
   letter-spacing: 0.06em;
   line-height: 1.88;
-
+  border-radius: 4px;
+  background: var(--accent-color);
+  color: var(--white-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.button-primary:hover,
-.button-primary:focus {
+.button:hover,
+.button:focus {
   background: var(--second-button-color);
 }
 /*Преимущества*/
@@ -549,8 +544,8 @@ p {
   width: 30px;
   height: 30px;
   padding: 6px;
-  top: 11px;
-  right: 23px;
+  top: 8px;
+  right: 8px;
   background-color: var(--white-text-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -583,7 +578,7 @@ p {
   position: absolute;
   top: 50%;
   left: 12px;
-  margin-right: 20px;
+
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-field {
@@ -601,9 +596,7 @@ p {
 .form-field.comment {
   margin-bottom: 0;
 }
-.form-field.comment:focus-within > textarea {
-  border-color: var(--accent-color);
-}
+
 .form-field label {
   margin-bottom: 4px;
 }
@@ -617,7 +610,7 @@ p {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 .form-input {
   cursor: pointer;
@@ -637,27 +630,22 @@ p {
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
 }
+
 .form-checkbox {
   display: flex;
   position: relative;
-  width: 423px;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 20px;
-  align-items: center;
   justify-content: center;
 }
 .checkbox {
+  position: absolute;
   appearance: none;
 }
 .icon-check {
-  position: absolute;
-  display: inline-block;
   width: 16px;
   height: 15px;
-  left: 0;
-  border-radius: 4px;
-  border: 1px solid var(--primary-text-color);
+  margin-right: 7px;
+  border: 2px solid var(--title-text-color);
 }
 
 .text-comment::placeholder {
@@ -665,22 +653,20 @@ p {
 }
 
 .modal-icon.checkbox {
-  position: absolute;
-
   width: 16px;
   height: 15px;
-  top: 0;
-  left: 0;
+  top: 0px;
+  border-radius: 2px;
   opacity: 0;
-  margin-right: 7px;
+  right: 7px;
 }
-.checkbox:checked + .modal-icon.checkbox {
+
+.checkbox:checked + .icon-check,
+.checkbox:checked + .icon-check .modal-icon.checkbox {
   opacity: 1;
-  background-color: var(--accent-color);
+  background: var(--accent-color);
 }
-.checkbox:checked + .icon-check {
-  opacity: 0;
-}
+
 .form-button {
   display: block;
   margin-left: auto;
@@ -703,17 +689,11 @@ p {
   box-sizing: border-box;
   border-radius: 4px;
 }
-.checkbox.modal-icon {
-  width: 16px;
-}
+
 .checkbox-link {
   color: var(--accent-color);
 }
-.check-text {
-  line-height: 1.7;
-  margin-left: 7px;
-  line-height: 1.7;
-}
+/*Портфолио*/
 
 .filter-button {
   color: var(--title-text-color);
